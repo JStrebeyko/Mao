@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         getLesson() {
-            fetch("http://fortunecookieapi.herokuapp.com/v1/lessons/")
+            fetch("https://fortunecookieapi.herokuapp.com/v1/lessons/")
             .then(resp => { return resp.json(); })
             .then(data => {
                 const lessonIndex = Math.floor(Math.random() * data.length);

@@ -9694,7 +9694,7 @@ document.addEventListener('DOMContentLoaded', function () {
             value: function getLesson() {
                 var _this4 = this;
 
-                fetch("http://fortunecookieapi.herokuapp.com/v1/lessons/").then(function (resp) {
+                fetch("https://fortunecookieapi.herokuapp.com/v1/lessons/").then(function (resp) {
                     return resp.json();
                 }).then(function (data) {
                     var lessonIndex = Math.floor(Math.random() * data.length);

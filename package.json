@@ -1,0 +1,36 @@
+{
+  "name": "Mao",
+  "version": "1.0.0",
+  "description": "this is my site, a'right",
+  "main": "index.html",
+  "scripts": {
+    "compile" : "webpack",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JStrebeyko/Mao"
+  },
+  "author": "Jakub Strebeyko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JStrebeyko/Mao/issues"
+  },
+  "dependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-router": "^3.0.3",
+    "webpack-dev-server": "^2.7.1"
+  },
+
+  "homepage": "https://github.com/JStrebeyko/Mao#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^3.6.0"
+}
+
+}

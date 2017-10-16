@@ -1,3 +1,97 @@
-body{background-color:black;color:red}body .container{width:700px}body .hanziStyle{font-size:12em;text-align:center;line-height:200px;text-shadow:0 1px 0 #ccc,-5px 5px 0 #c9c9c9,-6px 7px 0 #bbb,-7px 9px 0 #b9b9b9,-8px 11px 0 #aaa,-8px 13px 1px rgba(0,0,0,0.1),-8px 2px 5px rgba(0,0,0,0.1),-8px 2px 6px rgba(0,0,0,0.1),-8px 6px 10px rgba(0,0,0,0.1),-8px 10px 20px rgba(0,0,0,0.25),-8px 20px 20px rgba(0,0,0,0.2),-8px 30px 40px rgba(0,0,0,0.15)}.box{max-width:800px;margin:0 auto}.pronunciationStyle{font-size:2em;display:inline-block;color:white}.translationStyle{font-size:2em;display:inline-block;float:right;color:white;font-weight:900}.top{height:50px;background-color:black;position:relative}.face{height:180px;width:300px;float:right;overflow:visible;position:absolute;right:-120px}.face:hover{-webkit-animation-name:wiggle;-ms-animation-name:wiggle;-ms-animation-duration:1000ms;-webkit-animation-duration:1000ms;-webkit-animation-iteration-count:1;-ms-animation-iteration-count:1;-webkit-animation-timing-function:ease-in-out;-ms-animation-timing-function:ease-in-out}@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(10deg)}25%{-webkit-transform:rotate(-10deg)}50%{-webkit-transform:rotate(20deg)}75%{-webkit-transform:rotate(-5deg)}100%{-webkit-transform:rotate(0deg)}}@-ms-keyframes wiggle{0%{-ms-transform:rotate(1deg)}25%{-ms-transform:rotate(-1deg)}50%{-ms-transform:rotate(1.5deg)}75%{-ms-transform:rotate(-5deg)}100%{-ms-transform:rotate(0deg)}}@keyframes wiggle{0%{transform:rotate(10deg)}25%{transform:rotate(-10deg)}50%{transform:rotate(20deg)}75%{transform:rotate(-5deg)}100%{transform:rotate(0deg)}}.mao{background-image:url("../img/mao.png");background-repeat:no-repeat;background-size:164px 179px}
+body {
+    background-color:black;
+    color:white;
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgICBjb2xvcjogcmVkO1xuXG5cblxuLmNvbnRhaW5lciB7XG4gICAgd2lkdGg6IDcwMHB4O1xufVxuXG4vLyBTVFlMRSBURUtTVFU6XG5cbi5oYW56aVN0eWxlICB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTJlbTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBsaW5lLWhlaWdodDogMjAwcHg7XG4gICAgICAgIHRleHQtc2hhZG93OiAwIDFweCAwICNjY2MsXG4gICAgICAgLTVweCA1cHggMCAjYzljOWM5LFxuICAgICAgIC02cHggN3B4IDAgI2JiYixcbiAgICAgICAtN3B4IDlweCAwICNiOWI5YjksXG4gICAgICAgLThweCAxMXB4IDAgI2FhYSxcbiAgICAgICAtOHB4IDEzcHggMXB4IHJnYmEoMCwwLDAsLjEpLFxuICAgICAgIC04cHggMnB4IDVweCByZ2JhKDAsMCwwLC4xKSxcbiAgICAgICAtOHB4IDJweCA2cHggcmdiYSgwLDAsMCwuMSksXG4gICAgICAgLThweCA2cHggMTBweCByZ2JhKDAsMCwwLC4xKSxcbiAgICAgICAtOHB4IDEwcHggMjBweCByZ2JhKDAsMCwwLC4yNSksXG4gICAgICAgLThweCAyMHB4IDIwcHggcmdiYSgwLDAsMCwuMiksXG4gICAgICAgLThweCAzMHB4IDQwcHggcmdiYSgwLDAsMCwuMTUpO1xuICAgIH1cbn1cblxuXG4uYm94IHtcbiAgICBtYXgtd2lkdGg6IDgwMHB4O1xuICAgIG1hcmdpbjogMCBhdXRvO1xufVxuLnByb251bmNpYXRpb25TdHlsZSB7XG4gICAgZm9udC1zaXplOiAyZW07XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnRyYW5zbGF0aW9uU3R5bGUge1xuICAgIGZvbnQtc2l6ZTogMmVtO1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICBmbG9hdDogcmlnaHQ7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGZvbnQtd2VpZ2h0OiA5MDA7XG59XG5cbi50b3Age1xuICAgIGhlaWdodDogNTBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5mYWNlIHtcbiAgICBoZWlnaHQ6IDE4MHB4O1xuICAgIHdpZHRoOiAzMDBweDtcbiAgICBmbG9hdDogcmlnaHQ7XG4gICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHJpZ2h0OiAtMTIwcHg7XG59XG4uZmFjZTpob3ZlciB7XG4gIC13ZWJraXQtYW5pbWF0aW9uLW5hbWU6IHdpZ2dsZTtcbiAgLW1zLWFuaW1hdGlvbi1uYW1lOiB3aWdnbGU7XG4gIC1tcy1hbmltYXRpb24tZHVyYXRpb246IDEwMDBtcztcbiAgLXdlYmtpdC1hbmltYXRpb24tZHVyYXRpb246IDEwMDBtcztcbiAgLXdlYmtpdC1hbmltYXRpb24taXRlcmF0aW9uLWNvdW50OiAxO1xuICAtbXMtYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogMTtcbiAgLXdlYmtpdC1hbmltYXRpb24tdGltaW5nLWZ1bmN0aW9uOiBlYXNlLWluLW91dDtcbiAgLW1zLWFuaW1hdGlvbi10aW1pbmctZnVuY3Rpb246IGVhc2UtaW4tb3V0O1xufVxuXG5ALXdlYmtpdC1rZXlmcmFtZXMgd2lnZ2xlIHtcbiAgMCUgey13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMTBkZWcpO31cbiAgMjUlIHstd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC0xMGRlZyk7fVxuICA1MCUgey13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMjBkZWcpO31cbiAgNzUlIHstd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC01ZGVnKTt9XG4gIDEwMCUgey13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7fVxufVxuXG5ALW1zLWtleWZyYW1lcyB3aWdnbGUge1xuICAwJSB7LW1zLXRyYW5zZm9ybTogcm90YXRlKDFkZWcpO31cbiAgMjUlIHstbXMtdHJhbnNmb3JtOiByb3RhdGUoLTFkZWcpO31cbiAgNTAlIHstbXMtdHJhbnNmb3JtOiByb3RhdGUoMS41ZGVnKTt9XG4gIDc1JSB7LW1zLXRyYW5zZm9ybTogcm90YXRlKC01ZGVnKTt9XG4gIDEwMCUgey1tcy10cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTt9XG59XG5cbkBrZXlmcmFtZXMgd2lnZ2xlIHtcbiAgMCUge3RyYW5zZm9ybTogcm90YXRlKDEwZGVnKTt9XG4gIDI1JSB7dHJhbnNmb3JtOiByb3RhdGUoLTEwZGVnKTt9XG4gIDUwJSB7dHJhbnNmb3JtOiByb3RhdGUoMjBkZWcpO31cbiAgNzUlIHt0cmFuc2Zvcm06IHJvdGF0ZSgtNWRlZyk7fVxuICAxMDAlIHt0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTt9XG59XG5cblxuLm1hbyB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWcvbWFvLnBuZycpO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiAxNjRweCAxNzlweDtcblxufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLEFBQUEsSUFBSSxBQUFDLENBQ0QsZ0JBQWdCLENBQUUsS0FBSyxDQUN2QixLQUFLLENBQUUsR0FBRyxDQTJCYixBQTdCRCxBQU1BLElBTkksQ0FNSixVQUFVLEFBQUMsQ0FDUCxLQUFLLENBQUUsS0FBSyxDQUNmLEFBUkQsQUFZQSxJQVpJLENBWUosV0FBVyxBQUFFLENBQ0wsU0FBUyxDQUFFLElBQUksQ0FDZixVQUFVLENBQUUsTUFBTSxDQUNsQixXQUFXLENBQUUsS0FBSyxDQUNsQixXQUFXLENBQUUsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUN6QixJQUFHLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxPQUFPLENBQ2pCLElBQUcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FDZCxJQUFHLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxPQUFPLENBQ2pCLElBQUcsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FDZixJQUFHLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxlQUFjLENBQzNCLElBQUcsQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFDLGVBQWMsQ0FDMUIsSUFBRyxDQUFDLEdBQUcsQ0FBQyxHQUFHLENBQUMsZUFBYyxDQUMxQixJQUFHLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxlQUFjLENBQzNCLElBQUcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLGdCQUFlLENBQzdCLElBQUcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLGVBQWMsQ0FDNUIsSUFBRyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsZ0JBQWUsQ0FDaEMsQUFJTCxBQUFBLElBQUksQUFBQyxDQUNELFNBQVMsQ0FBRSxLQUFLLENBQ2hCLE1BQU0sQ0FBRSxNQUFNLENBQ2pCLEFBQ0QsQUFBQSxtQkFBbUIsQUFBQyxDQUNoQixTQUFTLENBQUUsR0FBRyxDQUNkLE9BQU8sQ0FBRSxZQUFZLENBQ3JCLEtBQUssQ0FBRSxLQUFLLENBQ2YsQUFFRCxBQUFBLGlCQUFpQixBQUFDLENBQ2QsU0FBUyxDQUFFLEdBQUcsQ0FDZCxPQUFPLENBQUUsWUFBWSxDQUNyQixLQUFLLENBQUUsS0FBSyxDQUNaLEtBQUssQ0FBRSxLQUFLLENBQ1osV0FBVyxDQUFFLEdBQUcsQ0FDbkIsQUFFRCxBQUFBLElBQUksQUFBQyxDQUNELE1BQU0sQ0FBRSxJQUFJLENBQ1osZ0JBQWdCLENBQUUsS0FBSyxDQUN2QixRQUFRLENBQUUsUUFBUSxDQUNyQixBQUVELEFBQUEsS0FBSyxBQUFDLENBQ0YsTUFBTSxDQUFFLEtBQUssQ0FDYixLQUFLLENBQUUsS0FBSyxDQUNaLEtBQUssQ0FBRSxLQUFLLENBQ1osUUFBUSxDQUFFLE9BQU8sQ0FDakIsUUFBUSxDQUFFLFFBQVEsQ0FDbEIsS0FBSyxDQUFFLE1BQU0sQ0FDaEIsQUFDRCxBQUFBLEtBQUssQUFBQSxNQUFNLEFBQUMsQ0FDVixzQkFBc0IsQ0FBRSxNQUFNLENBQzlCLGtCQUFrQixDQUFFLE1BQU0sQ0FDMUIsc0JBQXNCLENBQUUsTUFBTSxDQUM5QiwwQkFBMEIsQ0FBRSxNQUFNLENBQ2xDLGlDQUFpQyxDQUFFLENBQUMsQ0FDcEMsNkJBQTZCLENBQUUsQ0FBQyxDQUNoQyxpQ0FBaUMsQ0FBRSxXQUFXLENBQzlDLDZCQUE2QixDQUFFLFdBQVcsQ0FDM0MsQUFFRCxrQkFBa0IsQ0FBbEIsTUFBa0IsQ0FDaEIsQUFBQSxFQUFFLENBQUUsaUJBQWlCLENBQUUsYUFBYSxDQUNwQyxBQUFBLEdBQUcsQ0FBRSxpQkFBaUIsQ0FBRSxjQUFjLENBQ3RDLEFBQUEsR0FBRyxDQUFFLGlCQUFpQixDQUFFLGFBQWEsQ0FDckMsQUFBQSxHQUFHLENBQUUsaUJBQWlCLENBQUUsYUFBYSxDQUNyQyxBQUFBLElBQUksQ0FBRSxpQkFBaUIsQ0FBRSxZQUFZLEVBR3ZDLGNBQWMsQ0FBZCxNQUFjLENBQ1osQUFBQSxFQUFFLEFBQUMsQ0FBQyxhQUFhLENBQUUsWUFBWSxDQUFHLEFBQ2xDLEFBQUEsR0FBRyxBQUFDLENBQUMsYUFBYSxDQUFFLGFBQWEsQ0FBRyxBQUNwQyxBQUFBLEdBQUcsQUFBQyxDQUFDLGFBQWEsQ0FBRSxjQUFjLENBQUcsQUFDckMsQUFBQSxHQUFHLEFBQUMsQ0FBQyxhQUFhLENBQUUsYUFBYSxDQUFHLEFBQ3BDLEFBQUEsSUFBSSxBQUFDLENBQUMsYUFBYSxDQUFFLFlBQVksQ0FBRyxDQUd0QyxVQUFVLENBQVYsTUFBVSxDQUNSLEFBQUEsRUFBRSxDQUFFLFNBQVMsQ0FBRSxhQUFhLENBQzVCLEFBQUEsR0FBRyxDQUFFLFNBQVMsQ0FBRSxjQUFjLENBQzlCLEFBQUEsR0FBRyxDQUFFLFNBQVMsQ0FBRSxhQUFhLENBQzdCLEFBQUEsR0FBRyxDQUFFLFNBQVMsQ0FBRSxhQUFhLENBQzdCLEFBQUEsSUFBSSxDQUFFLFNBQVMsQ0FBRSxZQUFZLEVBSS9CLEFBQUEsSUFBSSxBQUFDLENBQ0QsZ0JBQWdCLENBQUUscUJBQXFCLENBQ3ZDLGlCQUFpQixDQUFFLFNBQVMsQ0FDNUIsZUFBZSxDQUFFLFdBQVcsQ0FFL0IifQ== */
+
+.container {
+    width:700px
+}
+
+
+
+.hanziStyle {
+    font-size:15rem;
+    text-align:center;
+    line-height:300px;
+    text-shadow:0 1px 0 #ccc,
+                -5px 5px 0 #c9c9c9,
+                -6px 7px 0 #bbb,
+                -7px 9px 0 #b9b9b9,
+                -8px 11px 0 #aaa,
+                -8px 13px 1px rgba(0,0,0,0.1),
+                -8px 2px 5px rgba(0,0,0,0.1),
+                -8px 2px 6px rgba(0,0,0,0.1),
+                -8px 6px 10px rgba(0,0,0,0.1),
+                -8px 10px 20px rgba(0,0,0,0.25),
+                -8px 20px 20px rgba(0,0,0,0.2),
+                -8px 30px 40px rgba(0,0,0,0.15)}
+
+.box {
+    max-width: 800px;
+    margin:0 auto;
+    height: 100px;
+}
+
+.pronunciationStyle {
+    font-size:2rem;
+    height: 50px;
+    display:inline-block;
+    color:white}
+
+
+.translationStyle {
+    font-size:2rem;
+    display:inline-block;
+    float:right;
+    color:white;
+    font-weight:900}
+
+.top {
+    max-height: 300px;
+    background-color:black;
+    position:relative}
+
+.face {height:180px;
+    width:300px;
+    float:right;
+    overflow:visible;
+    position:absolute;
+    right:-120px
+    }
+
+.face:hover{-webkit-animation-name:wiggle;
+    -ms-animation-name:wiggle;
+    -ms-animation-duration:1000ms;
+    -webkit-animation-duration:1000ms;
+    -webkit-animation-iteration-count:1;
+    -ms-animation-iteration-count:1;
+    -webkit-animation-timing-function:ease-in-out;
+    -ms-animation-timing-function:ease-in-out}
+
+@-webkit-keyframes wiggle {0%{-webkit-transform:rotate(10deg)}
+25%{-webkit-transform:rotate(-10deg)}
+50%{-webkit-transform:rotate(20deg)}
+75%{-webkit-transform:rotate(-5deg)}100%{-webkit-transform:rotate(0deg)}}
+
+@-ms-keyframes wiggle{ 0%{-ms-transform:rotate(1deg)}
+                        25%{-ms-transform:rotate(-1deg)}
+                        50%{-ms-transform:rotate(1.5deg)}
+                        75%{-ms-transform:rotate(-5deg)}
+                        100%{-ms-transform:rotate(0deg)}}
+
+@keyframes wiggle { 0%{transform:rotate(10deg)}
+                    25%{transform:rotate(-10deg)}
+                    50%{transform:rotate(20deg)}
+                    75%{transform:rotate(-5deg)}
+                    100%{transform:rotate(0deg)}}
+
+.mao {
+    background-image:url("../img/mao.png");
+    background-repeat:no-repeat;
+    background-size: 164px 179px}
+
+
+.lekcja-class {
+    height: 100px
+}

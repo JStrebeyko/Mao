@@ -8,8 +8,7 @@ It is enough to just clone it and see it fly. Just hit the head up for next less
 
 ## Built with
 
-React.js
-Sass (just a lil bit for now)
+React.js, CSS
 
 
 ## Acknowledgements

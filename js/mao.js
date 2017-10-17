@@ -9626,7 +9626,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     null,
                     _react2.default.createElement(
                         'div',
-                        { className: 'hanziStyle' },
+                        { className: 'hanziStyle', onClick: this.props.getAnother },
                         this.props.lesson.chinese
                     ),
                     _react2.default.createElement(
@@ -9650,73 +9650,47 @@ document.addEventListener('DOMContentLoaded', function () {
         return Lesson;
     }(_react2.default.Component);
 
-    var Top = function (_React$Component2) {
-        _inherits(Top, _React$Component2);
-
-        function Top() {
-            _classCallCheck(this, Top);
-
-            return _possibleConstructorReturn(this, (Top.__proto__ || Object.getPrototypeOf(Top)).apply(this, arguments));
-        }
-
-        _createClass(Top, [{
-            key: 'render',
-            value: function render() {
-                return _react2.default.createElement(
-                    'div',
-                    { className: 'top' },
-                    _react2.default.createElement('div', { className: 'face mao', onClick: this.getAnother })
-                );
-            }
-        }]);
-
-        return Top;
-    }(_react2.default.Component);
-
-    var Template = function (_React$Component3) {
-        _inherits(Template, _React$Component3);
+    var Template = function (_React$Component2) {
+        _inherits(Template, _React$Component2);
 
         function Template(props) {
             _classCallCheck(this, Template);
 
-            var _this3 = _possibleConstructorReturn(this, (Template.__proto__ || Object.getPrototypeOf(Template)).call(this, props));
+            var _this2 = _possibleConstructorReturn(this, (Template.__proto__ || Object.getPrototypeOf(Template)).call(this, props));
 
-            _this3.state = {
-                lessons: [],
-                number: 1,
-                theLesson: ""
-            };
-            return _this3;
-        }
-
-        _createClass(Template, [{
-            key: 'getLesson',
-            value: function getLesson() {
-                var _this4 = this;
-
+            _this2.getLesson = function () {
                 fetch("https://fortunecookieapi.herokuapp.com/v1/lessons/").then(function (resp) {
                     return resp.json();
                 }).then(function (data) {
                     var lessonIndex = Math.floor(Math.random() * data.length);
-                    _this4.setState({
+                    _this2.setState({
                         lessons: data,
                         number: lessonIndex,
                         theLesson: data[lessonIndex]
                     });
                 });
-            }
-        }, {
-            key: 'getAnother',
-            value: function getAnother() {
-                this.setState({
-                    number: Math.floor(Math.random() * this.state.lessons.length),
-                    theLesson: lessons[lessonIndex]
+            };
+
+            _this2.getAnother = function () {
+                _this2.setState({
+                    number: Math.floor(Math.random() * _this2.state.lessons.length),
+                    theLesson: _this2.state.lessons[_this2.state.number]
                 });
-                console.log(this.state.number);
-            }
-        }, {
-            key: 'componentDidMount',
-            value: function componentDidMount() {
+                console.log(_this2.state.number);
+            };
+
+            _this2.state = {
+                lessons: [],
+                number: 1,
+                theLesson: {}
+            };
+
+            return _this2;
+        }
+
+        _createClass(Template, [{
+            key: 'componentWillMount',
+            value: function componentWillMount() {
                 this.getLesson();
             }
         }, {
@@ -9725,7 +9699,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return _react2.default.createElement(
                     'div',
                     null,
-                    _react2.default.createElement(Top, { onClick: this.getAnother }),
+                    _react2.default.createElement('div', { className: 'face mao', onClick: this.getAnother }),
                     _react2.default.createElement(Lesson, { lesson: this.state.theLesson })
                 );
             }

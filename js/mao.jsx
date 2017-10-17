@@ -4,10 +4,9 @@ import ReactDOM from 'react-dom';
 document.addEventListener('DOMContentLoaded', () => {
 
     class Lesson extends React.Component {
-
         render() {
             return <div>
-                    <div className="hanziStyle">{this.props.lesson.chinese}</div>
+                    <div className="hanziStyle" onClick={this.props.getAnother}>{this.props.lesson.chinese}</div>
                     <div className="box">
                         <h2 className="pronunciationStyle">{this.props.lesson.pronunciation}</h2>
                         <p className="translationStyle">{this.props.lesson.english}</p>
@@ -16,24 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-    class Top extends React.Component {
-
-        render(){
-            return <div className="top"><div className="face mao" onClick={this.getAnother}></div></div>
-        }
-    }
-
     class Template extends React.Component {
         constructor(props) {
             super(props);
             this.state={
                 lessons:[],
                 number: 1,
-                theLesson:""
+                theLesson:{},
             };
+
         };
 
-        getLesson() {
+        getLesson = () => {
             fetch("https://fortunecookieapi.herokuapp.com/v1/lessons/")
             .then(resp => { return resp.json(); })
             .then(data => {
@@ -46,30 +39,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        getAnother() {
+        getAnother = () => {
             this.setState({
                 number: Math.floor(Math.random() * this.state.lessons.length),
-                theLesson: lessons[lessonIndex]
+                theLesson: this.state.lessons[this.state.number]
             });
-            console.log(this.state.number)
+            console.log(this.state.number);
         };
 
-        componentDidMount() {
+        componentWillMount() {
             this.getLesson();
         };
 
 
         render() {
             return <div>
-                <Top onClick={this.getAnother}/>
-                <Lesson lesson={this.state.theLesson}></Lesson>
-            </div>
+                    <div className="face mao" onClick={this.getAnother} />
+                    <Lesson lesson={this.state.theLesson} />
+                </div>
         }
 
     }
 
     ReactDOM.render(
-        <Template/>,
+        <Template />,
         document.getElementById('app')
     );
 

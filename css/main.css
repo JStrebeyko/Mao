@@ -1,3 +1,7 @@
+* {
+    box-sizing: content-box;
+}
+
 body {
     background-color:black;
     color:white;
@@ -5,16 +9,16 @@ body {
 
 
 .container {
-    width:700px
+    width: 700px;
 }
 
 
 
 .hanziStyle {
-    font-size:15rem;
-    text-align:center;
-    line-height:300px;
-    text-shadow:0 1px 0 #ccc,
+    font-size: 16rem;
+    text-align: center;
+    line-height: 300px;
+    text-shadow: 0 1px 0 #ccc,
                 -5px 5px 0 #c9c9c9,
                 -6px 7px 0 #bbb,
                 -7px 9px 0 #b9b9b9,
@@ -28,46 +32,50 @@ body {
                 -8px 30px 40px rgba(0,0,0,0.15)}
 
 .box {
-    max-width: 800px;
-    margin:0 auto;
+    max-width: 800px; 
+    margin: 0 auto;
     height: 100px;
 }
 
 .pronunciationStyle {
-    font-size:2rem;
+    font-size: 2rem;
     height: 50px;
-    display:inline-block;
-    color:white}
+    display: inline-block;
+    color: white; 
+}
 
 
 .translationStyle {
     font-size:2rem;
-    display:inline-block;
-    float:right;
+    float: right;
     color:white;
-    font-weight:900}
+    font-weight: 900;
+}
 
-.top {
-    max-height: 300px;
-    background-color:black;
-    position:relative}
+.face {
+    height: 180px;
+    width: 166px;
+    overflow:  visible;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
 
-.face {height:180px;
-    width:300px;
-    float:right;
-    overflow:visible;
-    position:absolute;
-    right:-120px
-    }
+.mao {
+    background-image: url("../img/mao.png");
+    background-repeat: no-repeat;
+    background-size: 164px 179px;
+}
 
-.face:hover{-webkit-animation-name:wiggle;
-    -ms-animation-name:wiggle;
-    -ms-animation-duration:1000ms;
-    -webkit-animation-duration:1000ms;
-    -webkit-animation-iteration-count:1;
-    -ms-animation-iteration-count:1;
-    -webkit-animation-timing-function:ease-in-out;
-    -ms-animation-timing-function:ease-in-out}
+.face:hover{-webkit-animation-name: wiggle;
+    -ms-animation-name: wiggle;
+    -ms-animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out
+}
 
 @-webkit-keyframes wiggle {0%{-webkit-transform:rotate(10deg)}
 25%{-webkit-transform:rotate(-10deg)}
@@ -84,14 +92,6 @@ body {
                     25%{transform:rotate(-10deg)}
                     50%{transform:rotate(20deg)}
                     75%{transform:rotate(-5deg)}
-                    100%{transform:rotate(0deg)}}
-
-.mao {
-    background-image:url("../img/mao.png");
-    background-repeat:no-repeat;
-    background-size: 164px 179px}
-
-
-.lekcja-class {
-    height: 100px
+                    100%{transform:rotate(0deg)}
 }
+

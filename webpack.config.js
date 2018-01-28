@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-    entry: "./js/mao.jsx",
+    entry: "./js/App.jsx",
     output: {
-    	path: path.join(__dirname, "./js/"),
-    	filename: "mao.js"
+    	path: path.join(__dirname, "./dist/"),
+    	filename: "App.js"
         },
     watch: true,
     module: {
@@ -12,6 +12,15 @@ module.exports = {
                 test: /\.jsx$/, exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: { presets: ['env', 'stage-2', 'react'] }
+            }, {
+                test: /\.css$/, exclude: /node_modules/,
+                use: ['style-loader', 'css-loader']
+            }, {
+                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000000
+                }
             }
         ]
     }

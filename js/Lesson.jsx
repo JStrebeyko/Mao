@@ -1,7 +1,6 @@
 import React from 'react';
 
 class Lesson extends React.Component {
-props
 
   render() {
       return <div className = "container">
